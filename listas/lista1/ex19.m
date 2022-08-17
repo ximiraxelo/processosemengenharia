@@ -9,8 +9,5 @@ for index = 1:4
     value(index) = input('');
 end
 
-for index = 1:4
-    if (value(index) < 0)
-        fprintf('%.2f is negative\n', value(index))
-    end
-end
+negatives = value(value<0);
+fprintf('The negative value(s) are: %s\n', join(string(negatives), ','));
