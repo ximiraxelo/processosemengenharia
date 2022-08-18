@@ -95,13 +95,20 @@ fprintf('and %i out of the interval\n', count)
 % Ler 10 numeros e mostrar qual o menor
 % dos numeros lidos.
 
+% obs: a função min() poderia ser usada
+
 numbers = zeros(10, 1);
+smallest = Inf;
 
 for index = 1:10
     numbers(index) = input('Type a number: ');
+
+    if (numbers(index) < smallest)
+        smallest = numbers(index);
+    end
 end
 
-fprintf('The smallest number is %.2f\n', min(numbers))
+fprintf('The smallest number is %.2f\n', smallest)
 
 %% i)
 % Ler 10 valores, calcular e escrever a media
