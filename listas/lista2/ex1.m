@@ -114,13 +114,19 @@ fprintf('The smallest number is %.2f\n', smallest)
 % Ler 10 valores, calcular e escrever a media
 % aritmetica destes valores.
 
+% obs: a função mean() poderia ser usada
+
 numbers = zeros(10, 1);
+average = 0;
 
 for index = 1:10
     numbers(index) = input('Type a number: ');
+    average = average + numbers(index);
 end
 
-fprintf('The mean is %.2f\n', mean(numbers))
+average = average/10;
+
+fprintf('The mean is %.2f\n', average)
 
 %% j)
 % Ler o numero N de alunos existentes em
