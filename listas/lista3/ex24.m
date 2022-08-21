@@ -27,6 +27,11 @@ end
 
 meanFemale = meanFemale/(50 - countMale);
 
+fprintf(['The maximum height is %f\n' ...
+    'The minimum height is %f\n'], biggest, smallest)
+fprintf('The mean of the height of the womans is %f\n', meanFemale)
+fprintf('There are %i man(s) (%.2f %%)\n', countMale, 100*countMale/50)
+
 function gender = inputGender(string)
     gender = input(string, 's');
 
